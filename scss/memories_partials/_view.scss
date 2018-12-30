@@ -1,8 +1,23 @@
-.image-memory--add {
-   width: 100px;
-}
-
-.jumbotron {
-   display: block;
+.view-memories {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
    text-align: center;
+
+   .jumbotron {
+      padding: 10px !important;
+      max-width: 300px;
+
+      img.image-memory--add {
+         width: 50px;
+      }
+
+      p {
+         font-size: 12px;
+      }
+      .outro p {
+         color: $gray-dark;
+         font-weight: bold;
+      }
+   }
 }
