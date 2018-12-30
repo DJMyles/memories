@@ -1,3 +1,59 @@
-.logo img {
-  max-width: 100px;
+$min_width: 320px;
+$max_width: 768px;
+$min_font: 12px;
+$max_font: 20px;
+
+html {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.main-container {
+  max-width: 768px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Merriweather', Georgia, serif;
+}
+
+.menu--account a,
+.navbar-brand,
+.navbar-text {
+  color: $gray-dark;
+  font-family: 'Merriweather', Georgia, serif;
+}
+
+.navbar-brand {
+  font-size: 60px;
+  float: none;
+}
+
+.navbar-text {
+  font-size: 18px;
+  float: none;
+}
+
+.region-header {
+  padding-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu--account {
+   font-size: 14px;
+  display: flex
+}
+
+.page-header,
+.highlighted {
+  margin-top: 2em;
+}
+
+.page-header {
+  display: block;
+  text-align: center;
 }

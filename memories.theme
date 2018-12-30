@@ -6,3 +6,69 @@
  *
  * Place your custom PHP code in this file.
  */
+
+ function memories_preprocess_form_element_label(&$variables) {
+   $attributes = $variables['attributes'];
+   $attributes -> addClass('sr-only');
+ }
+
+ function yourmodule_form_alter(&$form, &$form_state, $form_id) {
+
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function memories_form_alter(&$form, $form_state, $form_id) {
+    switch($form_id) {
+      case 'user_login_form':
+         $form['name']['#attributes']['placeholder'] = t('Username or e-mail');
+         $form['pass']['#attributes']['placeholder'] = t('Password');
+         break;
+      case 'user_pass':
+         $form['name']['#attributes']['placeholder'] = t('Username or e-mail');
+      break;
+      case 'user_register_form':
+         $form['account']['mail']['#attributes']['placeholder'] = t('E-mail');
+         $form['account']['name']['#attributes']['placeholder'] = t('Username');
+         break;
+      case 'user_form':
+         $form['account']['current_pass']['#attributes']['placeholder'] = t("Current password");
+         $form['#after_build'][] = 'memories_after_build';
+         break;
+      }
+}
+
+function memories_after_build($form, &$form_state) {
+    $form['account']['pass']['pass1']['#attributes']['placeholder'] = t('New password');
+    $form['account']['pass']['pass2']['#attributes']['placeholder'] = t('Confirm new password');
+    return $form;
+}
+
+function hook_menu() {
+  $items = array();
+  global $user;
+  $user_id = $user->uid;
+  $items['user/' . $user_id . '/edit'] = array(
+    'title' => 'Edit account',
+    'page callback' => 'memories_user_edit',
+    'access callback' => 'memories_user_edit_access',
+    'menu_name' => 'user-menu',
+    'type' => MENU_SUGGESTED_ITEM,
+    'file' => 'user.pages.inc',
+    'file path' => 'modules/user'
+  );
+
+  return $items;
+}
+
+function memories_user_edit() {
+  global $user;
+  $account = user_load($user->uid);
+  return drupal_get_form('user_profile_form', $account);
+}
+
+function memories_user_edit_access(){
+  global $user;
+  return user_edit_access($user);
+}

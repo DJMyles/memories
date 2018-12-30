@@ -1066,7 +1066,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   line-height: 1.42857;
   color: #333333;
@@ -5195,7 +5195,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -5308,7 +5308,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -6330,7 +6330,7 @@ body.toolbar-loading {
   border-radius: 4px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   color: inherit;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   list-style: none;
   min-width: 160px;
@@ -6393,5 +6393,73 @@ p:last-child,
   .help-block:first-child, .control-group .help-inline:first-child {
     margin-top: 0; }
 
-.logo img {
-  max-width: 100px; }
+html {
+  font-size: 12px; }
+  @media screen and (min-width: 320px) {
+    html {
+      font-size: calc(12px + 8 * ((100vw - 320px) / 448)); } }
+  @media screen and (min-width: 768px) {
+    html {
+      font-size: 20px; } }
+
+body {
+  font-family: 'Roboto', sans-serif; }
+
+.main-container {
+  max-width: 768px; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Merriweather', Georgia, serif; }
+
+.menu--account a,
+.navbar-brand,
+.navbar-text {
+  color: #333333;
+  font-family: 'Merriweather', Georgia, serif; }
+
+.navbar-brand {
+  font-size: 60px;
+  float: none; }
+
+.navbar-text {
+  font-size: 18px;
+  float: none; }
+
+.region-header {
+  padding-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.menu--account {
+  font-size: 14px;
+  display: flex; }
+
+.page-header,
+.highlighted {
+  margin-top: 2em; }
+
+.page-header {
+  display: block;
+  text-align: center; }
+
+.user-login-form,
+.user-pass,
+.user-register-form,
+.user-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .user-login-form .form-control,
+  .user-pass .form-control,
+  .user-register-form .form-control,
+  .user-form .form-control {
+    display: block;
+    max-width: 300px; }
+
+.image-memory--add {
+  width: 100px; }
+
+.jumbotron {
+  display: block;
+  text-align: center; }

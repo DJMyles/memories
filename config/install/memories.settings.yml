@@ -13,7 +13,3 @@
 
 # Disable the CDN provider so compiled source files can be used.
 cdn_provider: ''
-
-logo:
-  path: 'themes/custom/memories/images/memories-empty.png'
-  use_default: false
