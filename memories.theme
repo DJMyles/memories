@@ -7,41 +7,41 @@
  * Place your custom PHP code in this file.
  */
 
- function memories_preprocess_form_element_label(&$variables) {
-   $attributes = $variables['attributes'];
-   $attributes -> addClass('sr-only');
- }
-
- function yourmodule_form_alter(&$form, &$form_state, $form_id) {
-
-}
-
 /**
  * Implements hook_form_alter().
  */
 function memories_form_alter(&$form, $form_state, $form_id) {
-    switch($form_id) {
+   switch($form_id) {
       case 'user_login_form':
          $form['name']['#attributes']['placeholder'] = t('Username or e-mail');
          $form['pass']['#attributes']['placeholder'] = t('Password');
+         $form['name']['#title_display'] = 'invisible';
+         $form['pass']['#title_display'] = 'invisible';
          break;
       case 'user_pass':
          $form['name']['#attributes']['placeholder'] = t('Username or e-mail');
+         $form['name']['#title_display'] = 'invisible';
       break;
       case 'user_register_form':
          $form['account']['mail']['#attributes']['placeholder'] = t('E-mail');
          $form['account']['name']['#attributes']['placeholder'] = t('Username');
+         $form['account']['mail']['#title_display'] = 'invisible';
+         $form['account']['name']['#title_display'] = 'invisible';
          break;
       case 'user_form':
          $form['account']['current_pass']['#attributes']['placeholder'] = t("Current password");
+         $form['account']['current_pass']['#title_display'] = 'invisible';
          $form['#after_build'][] = 'memories_after_build';
          break;
-      }
+   }
+   $form['revision_information']['#access'] = false;
 }
 
 function memories_after_build($form, &$form_state) {
     $form['account']['pass']['pass1']['#attributes']['placeholder'] = t('New password');
     $form['account']['pass']['pass2']['#attributes']['placeholder'] = t('Confirm new password');
+    $form['account']['pass']['pass1']['#title_display'] = 'invisible';
+    $form['account']['pass']['pass2']['#title_display'] = 'invisible';
     return $form;
 }
 
@@ -71,4 +71,8 @@ function memories_user_edit() {
 function memories_user_edit_access(){
   global $user;
   return user_edit_access($user);
+}
+
+function memories_preprocess_links(&$variables) {
+  $variables['links']['node-readmore']['link']['#title'] = t('Remember...');
 }

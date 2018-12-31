@@ -6413,5 +6413,18 @@ h1, h2, h3, h4, h5, h6 {
     .view-memories .jumbotron p {
       font-size: 12px; }
     .view-memories .jumbotron .outro p {
+      color: #333333; }
+  .view-memories .add-widget {
+    margin-bottom: 20px; }
+    .view-memories .add-widget img.image-memory--add {
+      width: 50px; }
+    .view-memories .add-widget p {
       color: #333333;
-      font-weight: bold; }
+      font-size: 12px; }
+  .view-memories .node-readmore {
+    font-size: 12px; }
+    .view-memories .node-readmore a {
+      color: #333333; }
+  .view-memories article.teaser h2 span {
+    font-size: 18px;
+    color: #333333; }
