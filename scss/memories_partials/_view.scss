@@ -73,10 +73,25 @@
       }
    }
 
-   .timeline-list li.odd article.teaser {
-      border-left: 2px solid lighten($brand-primary, 55%);
+   .timeline-list {
+
+      li.odd {
+         article.teaser {
+            border-left: 2px solid lighten($brand-primary, 55%);
+
+            img {
+               float: left;
+            }
+         }
+      }
+      li.even {
+         article.teaser {
+            border-right: 2px solid lighten($brand-primary, 55%);
+
+            img {
+               float: right;
+            }
+         }
+      }
    }
-   .timeline-list li.even article.teaser {
-     border-right: 2px solid lighten($brand-primary, 55%);
-  }
 }

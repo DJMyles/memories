@@ -3,16 +3,12 @@
    .field--name-field-date {
       font-style: italic;
       margin-bottom: 1em;
-      border-bottom: 2px solid $gray;
+      border-bottom: 1px solid $brand-primary;
       padding-bottom: 1em;
    }
 
    .field--name-field-image {
       margin-bottom: 1em;
-   }
-
-   .system-link-list {
-      display: none;
    }
 
    .page-header {
@@ -24,5 +20,9 @@
 
    .is-unpublished {
       background-color: #ffffff
+   }
+
+   .footer {
+      margin-top: 1em;
    }
 }
