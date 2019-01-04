@@ -1,0 +1,28 @@
+.page-node-type-memory {
+
+   .field--name-field-date {
+      font-style: italic;
+      margin-bottom: 1em;
+      border-bottom: 2px solid $gray;
+      padding-bottom: 1em;
+   }
+
+   .field--name-field-image {
+      margin-bottom: 1em;
+   }
+
+   .system-link-list {
+      display: none;
+   }
+
+   .page-header {
+      text-align: left;
+      padding-bottom: 0;
+      border-bottom: 0;
+      margin: .5em 0;
+   }
+
+   .is-unpublished {
+      background-color: #ffffff
+   }
+}

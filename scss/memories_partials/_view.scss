@@ -1,12 +1,17 @@
-.view-memories {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   text-align: center;
+.path-frontpage {
+
+   .page-header {
+      text-align: center;
+   }
 
    .jumbotron {
       padding: 10px !important;
       max-width: 300px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: lighten($brand-secondary, 60%);
+      border-radius: 0;
 
       img.image-memory--add {
          width: 50px;
@@ -15,13 +20,21 @@
       p {
          font-size: 12px;
       }
+
       .outro p {
          color: $gray-dark;
+         text-decoration: underline;
+
+         &:hover,
+         &:focus {
+            text-decoration: none;
+         }
       }
    }
 
    .add-widget {
       margin-bottom: 20px;
+      text-align: center;
 
       img.image-memory--add {
          width: 50px;
@@ -37,11 +50,33 @@
 
       a {
          color: $gray-dark;
+         text-decoration: underline;
+
+         &:hover,
+         &:focus {
+            text-decoration: none;
+         }
       }
    }
 
-   article.teaser h2 span {
-      font-size: 18px;
-      color: $gray-dark;
+   .memory.teaser {
+      padding: 10px;
+      background-color: lighten($brand-secondary, 60%);
+
+      h2 {
+         margin-top: 0;
+
+         span {
+            font-size: 18px;
+            color: $gray-dark;
+         }
+      }
    }
+
+   .timeline-list li.odd article.teaser {
+      border-left: 2px solid lighten($brand-primary, 55%);
+   }
+   .timeline-list li.even article.teaser {
+     border-right: 2px solid lighten($brand-primary, 55%);
+  }
 }

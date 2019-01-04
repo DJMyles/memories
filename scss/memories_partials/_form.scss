@@ -11,3 +11,23 @@
     max-width: 300px;
   }
 }
+
+.forgot-password a,
+.actions-suffix a {
+   display: block;
+   color: $gray-dark;
+   padding: 10px 15px;
+   line-height: 20px;
+   text-decoration: underline;
+
+  &:hover,
+  &:focus,
+  &:active {
+     background-color: $gray-lighter;
+     text-decoration: none;
+ }
+}
+
+.form-required:after {
+  background-image: none;
+}
