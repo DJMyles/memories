@@ -1,5 +1,6 @@
 body {
   font-family: 'Roboto', sans-serif;
+  color: $brand-primary;
 }
 
 .main-container {
@@ -13,7 +14,7 @@ h1,h2,h3,h4,h5,h6 {
 .menu--account a,
 .navbar-brand,
 .navbar-text {
-  color: $gray-dark;
+  color: $brand-primary;
   font-family: 'Merriweather', Georgia, serif;
 }
 
@@ -26,6 +27,13 @@ h1,h2,h3,h4,h5,h6 {
       padding-left: 10px;
       padding-right: 10px;
       max-width: 50%;
+
+      a {
+         &:hover,
+         &:focus {
+            background-color: $brand-tertiary;
+         }
+      }
    }
 
    li.first a {
@@ -40,7 +48,7 @@ h1,h2,h3,h4,h5,h6 {
 
       &:hover,
       &:focus {
-         background-color: $gray-lighter;
+         background-color: $brand-tertiary;
       }
    }
 }
@@ -51,6 +59,7 @@ h1,h2,h3,h4,h5,h6 {
    justify-content: center;
    flex-direction: column;
    margin-top: 2em;
+   color: $brand-primary;
 
    a img {
       max-width: 150px;
@@ -60,6 +69,19 @@ h1,h2,h3,h4,h5,h6 {
      font-size: 60px;
      float: none;
      z-index: 1;
+     color: lighten($brand-primary, 25%);
+
+     &:hover {
+        color: $brand-primary;
+     }
+
+     span {
+       color: $brand-primary;
+
+       &:hover {
+          color: lighten($brand-primary, 25%);
+       }
+     }
    }
 
    .navbar-text {
@@ -85,12 +107,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .page-header {
   margin-top: 1em;
-  border-bottom-color: $brand-primary;
-}
-
-.footer {
-   border-top: 1px solid $brand-primary;
-   width: auto;
+  border-bottom-color: $brand-decoration;
 }
 
 .nav-tabs {
@@ -120,7 +137,7 @@ h1,h2,h3,h4,h5,h6 {
 
          &:hover,
          &:focus {
-            background-color: $gray-lighter;
+            background-color: $brand-tertiary;
             text-decoration: none;
             outline: 0;
             border: 0;

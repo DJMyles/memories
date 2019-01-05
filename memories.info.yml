@@ -24,4 +24,5 @@ libraries-extend:
     - memories/framework
 
 libraries:
-- memories/fonts
+   - memories/js
+   - memories/fonts
