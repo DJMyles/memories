@@ -7,6 +7,22 @@ body {
   max-width: 768px;
 }
 
+header {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: auto !important;
+   max-width: none !important;
+   height: 155px;
+}
+
+.footer {
+   width: auto !important;
+   max-width: none !important;
+   margin-top: 1em;
+   background-color: $navbar-default-bg;
+}
+
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Merriweather', Georgia, serif;
 }
@@ -19,8 +35,8 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .menu--account {
+   font-size: 14px;
    display: flex;
-   align-items: center;
    justify-content: center;
 
    li {
@@ -54,10 +70,6 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .branding-block {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   flex-direction: column;
    margin-top: 2em;
    color: $brand-primary;
 
@@ -91,15 +103,6 @@ h1,h2,h3,h4,h5,h6 {
    }
 }
 
-.region-header {
-   padding-top: 2em;
-}
-
-.menu--account {
-   font-size: 14px;
-   display: flex
-}
-
 .page-header,
 .highlighted {
   margin-top: 2em;
@@ -107,7 +110,6 @@ h1,h2,h3,h4,h5,h6 {
 
 .page-header {
   margin-top: 1em;
-  border-bottom-color: $brand-decoration;
 }
 
 .nav-tabs {

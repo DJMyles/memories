@@ -12,10 +12,6 @@
       margin-right: auto;
       border-radius: 0;
 
-      img.image-memory--add {
-         width: 50px;
-      }
-
       p {
          font-size: 12px;
       }
@@ -35,9 +31,6 @@
       margin-bottom: 20px;
       text-align: center;
 
-      img.image-memory--add {
-         width: 50px;
-      }
       p {
         color: $brand-primary;
         font-size: 12px;
@@ -59,7 +52,7 @@
 
          &:after {
             content: attr(title);
-            font-size: 20px;
+            font-size: 18px;
             display: block;
          }
 
@@ -71,7 +64,7 @@
 
          time {
             font-style: italic;
-            font-size: 12px;
+            font-size: 10px;
          }
       }
    }

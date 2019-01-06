@@ -6343,6 +6343,20 @@ body {
 .main-container {
   max-width: 768px; }
 
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto !important;
+  max-width: none !important;
+  height: 155px; }
+
+.footer {
+  width: auto !important;
+  max-width: none !important;
+  margin-top: 1em;
+  background-color: #f8f8f8; }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Merriweather', Georgia, serif; }
 
@@ -6353,8 +6367,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Merriweather', Georgia, serif; }
 
 .menu--account {
+  font-size: 14px;
   display: flex;
-  align-items: center;
   justify-content: center; }
   .menu--account li {
     padding-left: 10px;
@@ -6375,10 +6389,6 @@ h1, h2, h3, h4, h5, h6 {
       background-color: #c4dfe6; }
 
 .branding-block {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   margin-top: 2em;
   color: #003b46; }
   .branding-block a img {
@@ -6399,20 +6409,12 @@ h1, h2, h3, h4, h5, h6 {
     float: none;
     text-align: center; }
 
-.region-header {
-  padding-top: 2em; }
-
-.menu--account {
-  font-size: 14px;
-  display: flex; }
-
 .page-header,
 .highlighted {
   margin-top: 2em; }
 
 .page-header {
-  margin-top: 1em;
-  border-bottom-color: #66a5ad; }
+  margin-top: 1em; }
 
 .nav-tabs {
   border-bottom: 0;
@@ -6485,8 +6487,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: auto;
   margin-right: auto;
   border-radius: 0; }
-  .path-frontpage .jumbotron img.image-memory--add {
-    width: 50px; }
   .path-frontpage .jumbotron p {
     font-size: 12px; }
   .path-frontpage .jumbotron .outro p {
@@ -6498,8 +6498,6 @@ h1, h2, h3, h4, h5, h6 {
 .path-frontpage .add-widget {
   margin-bottom: 20px;
   text-align: center; }
-  .path-frontpage .add-widget img.image-memory--add {
-    width: 50px; }
   .path-frontpage .add-widget p {
     color: #003b46;
     font-size: 12px; }
@@ -6519,7 +6517,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #003b46; }
     .path-frontpage .timeline-list a.memory-link:after {
       content: attr(title);
-      font-size: 20px;
+      font-size: 18px;
       display: block; }
     .path-frontpage .timeline-list a.memory-link:hover {
       position: relative;
@@ -6527,7 +6525,7 @@ h1, h2, h3, h4, h5, h6 {
       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5); }
     .path-frontpage .timeline-list a.memory-link time {
       font-style: italic;
-      font-size: 12px; }
+      font-size: 10px; }
 
 .path-frontpage .timeline-list li.even a.memory-link {
   -webkit-transform: rotate(2deg);
@@ -6593,8 +6591,3 @@ h1, h2, h3, h4, h5, h6 {
 
 .page-node-type-memory .is-unpublished {
   background-color: #ffffff; }
-
-.page-node-type-memory .footer {
-  width: auto;
-  margin-top: 1em;
-  border-top: 1px solid #66a5ad; }
